@@ -1,0 +1,118 @@
+.about-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-section {
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideIn 0.8s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about-section h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+  border-left: 5px solid #F3C333;
+  padding-left: 10px;
+  position: relative;
+  animation: lineGrow 1s ease forwards;
+}
+
+@keyframes lineGrow {
+  from {
+    border-left-width: 0;
+    opacity: 0;
+  }
+  to {
+    border-left-width: 5px;
+    opacity: 1;
+  }
+}
+
+/* List with stagger animation */
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+.about-section ul li:nth-child(1) { animation-delay: 0.2s; }
+.about-section ul li:nth-child(2) { animation-delay: 0.4s; }
+.about-section ul li:nth-child(3) { animation-delay: 0.6s; }
+.about-section ul li:nth-child(4) { animation-delay: 0.8s; }
+.about-section ul li:nth-child(5) { animation-delay: 1s; }
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect */
+.about-section ul li:hover {
+  background: #F3C333;
+  color: #fff;
+  transform: translateX(5px) scale(1.02);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+}
+
+.about-section ul li svg {
+  font-size: 22px;
+  color: #F3C333;
+  flex-shrink: 0;
+  margin-top: 4px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-section ul li:hover svg {
+  color: #fff;
+  transform: rotate(10deg);
+}
+
+.about-section ul li b {
+  font-size: 16px;
+  color: inherit;
+}
+
+.about-section ul li div {
+  line-height: 1.4;
+}
