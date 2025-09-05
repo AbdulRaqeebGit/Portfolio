@@ -13,7 +13,7 @@ const App = () => {
         <Navbar />
         <Routes>
           {/* Redirect from "/" to "/home" */}
-          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/Portfolio" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
