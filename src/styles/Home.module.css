@@ -2,7 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif; /* Updated font family */
 }
 
 body {
@@ -103,7 +103,7 @@ h2 {
 }
 
 .name h1 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Georgia, serif; /* Updated font family */
   font-size: 64px;
   line-height: 1.2;
 }
@@ -137,4 +137,41 @@ h2 {
   background-color: #ffdb4d;
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+}
+
+/* --- Media Query for Mobile and Tablet --- */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column-reverse;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .text,
+  .myPic {
+    width: 100%;
+    text-align: center;
+  }
+
+  .circle {
+    width: 250px; /* Smaller size for mobile devices */
+    height: 250px; /* Smaller size for mobile devices */
+    margin-bottom: 20px;
+  }
+
+  .name h1 {
+    font-size: 40px; /* Adjusted for better fit */
+  }
+
+  .summary p {
+    font-size: 16px;
+  }
+
+  .profession h2 {
+    font-size: 16px; /* Adjusted for better fit */
+  }
+
+  .buttons {
+    justify-content: center;
+  }
 }
